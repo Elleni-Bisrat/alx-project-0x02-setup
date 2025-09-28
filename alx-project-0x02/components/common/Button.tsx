@@ -1,12 +1,11 @@
-import { ButtonProps } from "@/interfaces";
+import { type ButtonProps } from "@/interfaces";
 
-export default function Button({ size, shape, label }: ButtonProps) {
-  const sizeClasses =
-    size === "small" ? "px-2 py-1 text-sm" :
-    size === "medium" ? "px-4 py-2" : "px-6 py-3 text-lg";
-
+export default function Button({ label, onClick }: ButtonProps) {
   return (
-    <button className={`bg-blue-500 text-white ${sizeClasses} ${shape}`}>
+    <button
+      onClick={onClick}
+      className="px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600"
+    >
       {label}
     </button>
   );
