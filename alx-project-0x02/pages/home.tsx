@@ -12,7 +12,6 @@ export default function Home() {
   };
 
   return (
-   
     <div className="p-6 space-y-4">
         <Header />
       <button
@@ -25,7 +24,7 @@ export default function Home() {
       {showModal && <PostModal onSubmit={addPost} />}
 
       {posts.map((post, i) => (
-        <Card key={i} title={post.title} content={post.content} />
+        <Card key={i} title={post.title} description ={post.content} />
       ))}
     </div>
   );

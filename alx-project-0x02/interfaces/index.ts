@@ -1,6 +1,6 @@
 export interface CardProps {
   title: string;
-  content: string;
+  description:string;
 }
 export interface ButtonProps {
   size: "small" | "medium" | "large";
